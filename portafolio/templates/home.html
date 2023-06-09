@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<header class="row bg-principal">
+  <div class="col-md-3 d-flex justify-content-end px-0 profile-col">
+    <img src="{% static 'portafolio/profile2.png' %}" class="img-fluid">
+  </div>
+  <div class="col-md-9 my-auto ps-5 about-col">
+    <h1 class="textos-titulos text-lg py-5 ">JUAN CAMILO ÁLVAREZ BERMÚDEZ</h1>
+    <h3 class="textos-subtitulos">Estudiante de Ingeniería Informática | Python Fullstack Developer</h3>
+    <p class="textos-normales">Soy un estudiante que se enfoca en el desarrollo tanto como de software, como de aplicativos webs. Tengo varios años de experiencia con el lenguaje de Python enfocado en el desarrollo del backend para aplicativos webs, web services, apis, apirest. Tambien manejo HTML, CSS:BOOSTRAP, JAVASCRIPT para el desarrollo del FrontEnd. Y tengo conocimiento en demás lenguajes que me permiten ampliar mi catálogo como desarrollador.</p>
+    <div class="text-center">
+      <a href="{% static 'portafolio/cv1.pdf' %}" class="btn btn-success btn-lg textos-titulos rounded-2 my-3" target="_blank">Descargar Hoja de Vida</a>
+    </div>
+  </div>
+</header>
+
+<div class="row my-5 text-center skill-row">
+    <h3 class="textos-titulos">SKILLS</h3>
+    <p class="textos-normales">La sección de las diferentes habilidades de programación y desarrollo que poseo como programador</p>
+    {% for skill in skills %}
+      <div class="card bg-principal card-project text-light m-2" style="width: 12rem;">
+        <img src="{{skill.icon.url}}" alt="{{skill.name}}" class="p-3" style="height: 150.2px;">
+        <div class="card-body text-center">
+          <h5 class="card-title textos-titulos">{{skill.name}}</h5>
+          <p class="card-text textos-normales">{{skill.levels}}</p>
+        </div>
+      </div>
+    
+  {% endfor %}  
+</div>
+
+
+
+
+
+<div class="row my-5 text-center">
+  <h3 class="textos-titulos">Mis proyectos</h3>
+  <p class="textos-normales">En la siguiente sección se presentan los proyectos que he hecho de manera personal, con diferentes tecnologías</p>
+  {% for project in projects %}
+
+  <div class="p-3">
+    <div class="card card-body bg-principal card-project">
+      <div class="row">
+        <div class="col-md-5 my-auto">
+          <img src="{{ project.image.url }}" alt="Imagen del proyecto" class="card-img-top "/>
+        </div>
+        <div class="col-md-7">
+          <h2 class="textos-titulos">{{ project.title }}</h2>
+          <p class="textos-normales">{{ project.description }}</p>
+            <a href="{{ project.url }}" class="btn btn-success btn-sm textos-normales project-wrap" target="_blank">Ir al Proyecto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}  
+</div>
+
+
+
+
+  {% endblock %}    

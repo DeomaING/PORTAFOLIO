@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'sans-bold';
+    src: url(source-sans-pro/SourceSansPro-Bold.otf);
+}
+
+@font-face {
+    font-family: 'sans-semibold';
+    src: url(source-sans-pro/SourceSansPro-Semibold.otf);
+}
+
+@font-face {
+    font-family: 'sans-light';
+    src: url(source-sans-pro/SourceSansPro-Light.otf);
+}
+
+@font-face {
+    font-family: 'source-pro';
+    src: url(source-sans-pro/SourceSansPro-Black.otf);
+}
+
+@font-face {
+    font-family: 'source-pro-regular';
+    src: url(source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+body {
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.bg-principal {
+    background-color: #0F2027;
+}
+
+.bg-secundario {
+    background-color: #042326;
+}
+
+.textos-titulos {
+    font-family: 'source-pro';
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 10px #000000;
+}
+
+.textos-subtitulos {
+    font-family: 'sans-semibold';
+    letter-spacing: 1px;
+}
+
+
+.textos-normales {
+    font-family: 'source-pro-regular';
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.card-project{
+    transition: 1s;
+}
+
+.card-project:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+
+.redes{
+    position: fixed;
+    left: 0;
+    top: 25%;
+    background-color: #D4BF57;
+    width: 85px;
+    border-radius: 0 35px 35px 0;
+}
+
+.img-red{
+    height: 50px;
+    width: 50px;
+    margin: 25px 0px 25px 15px;
+}
+
+.img-red img{
+    transition: .5s;
+}
+
+.img-red img:hover{
+    filter: drop-shadow(4px 3px 2px rgba(0, 0, 0, 0.5));
+    transition: .5s;
+}
+
+.project-wrap{
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+@media (max-width:1230px) {
+    .profile-col{
+        display: none!important; 
+    }
+    .about-col{
+        width: 100%;
+        text-align: center;
+    }
+    .skill-row{
+        display: flex;
+        justify-content: center;
+    }
+    .redes{
+        width: 50px;
+    }
+    .img-red{
+        margin: 25px 0px 25px 8px;
+        height: 30px;
+        width: 30px;
+    }
+}
